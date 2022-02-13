@@ -11,8 +11,8 @@ FIELDS
 SETV
     
 axis tight manual % this ensures that getframe() returns a consistent size
-v = VideoWriter(sprintf(example));
-open(v);
+#v = VideoWriter(sprintf(example));
+#open(v);
 
 for t=1:nt
    
@@ -51,7 +51,7 @@ for t=1:nt
     hold off
     drawnow
     frame = getframe(gcf);
-    writeVideo(v,frame);
+   # writeVideo(v,frame);
     end
     if t==nt && ixvx~=0 
     set(0,'CurrentFigure',PhaseSpacePlots)
@@ -217,7 +217,7 @@ for t=1:nt
     %t*dt-dt/2
    
 end
-close(v);
+#close(v);
 %plotspectrnew
 wk_bland
 %wk_zpic
